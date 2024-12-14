@@ -35,6 +35,9 @@ function getStationColor(color: String) {
     case "gold":
       return "bg-yellow-800";
       break;
+    case "green":
+      return "bg-green-800";
+      break;
 
     default:
       return "bg-grey-500";

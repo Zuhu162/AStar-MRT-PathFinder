@@ -104,7 +104,7 @@ export const nodesData: Node[] = [
         { color: "red", stationNumber: 15 },
         { color: "pink", stationNumber: 15 },
         { color: "purple", stationNumber: 6 },
-        { color: "aqua", stationNumber: 7 },
+        { color: "aqua", stationNumber: 0 },
         { color: "gold", stationNumber: 3 },
       ],
       connectedStations: [
@@ -138,6 +138,62 @@ export const nodesData: Node[] = [
       connectedStations: ["midValley", "salakSelatan"],
     },
     position: { x: 7100, y: 6000 },
+  },
+  {
+    id: "salakSelatan",
+    type: "station",
+    data: {
+      label: "Salak Selatan",
+      lines: [{ color: "blue", stationNumber: 12 }],
+      connectedStations: ["seputeh", "bandarTasikSelatan"],
+    },
+    position: { x: 9100, y: 6000 },
+  },
+  {
+    id: "bandarTasikSelatan",
+    type: "station",
+    data: {
+      label: "Bandar Tasilk Selatan",
+      lines: [
+        { color: "blue", stationNumber: 13 },
+        { color: "aqua", stationNumber: 1 },
+      ],
+      connectedStations: ["salakSelatan", "serdang", "klSentral"],
+    },
+    position: { x: 9500, y: 6400 },
+  },
+  {
+    id: "serdang",
+    type: "station",
+    data: {
+      label: "Serdang",
+      lines: [{ color: "blue", stationNumber: 14 }],
+      connectedStations: ["bandarTasikSelatan", "kajang"],
+    },
+    position: { x: 10100, y: 7100 },
+  },
+  {
+    id: "kajang",
+    type: "station",
+    data: {
+      label: "Kajang",
+      lines: [
+        { color: "blue", stationNumber: 15 },
+        { color: "green", stationNumber: 35 },
+      ],
+      connectedStations: ["serdang", "kajang2", "stadiumKajang"],
+    },
+    position: { x: 10100, y: 7300 },
+  },
+  {
+    id: "kajang2",
+    type: "station",
+    data: {
+      label: "Kajang 2",
+      lines: [{ color: "blue", stationNumber: 16 }],
+      connectedStations: ["bandarTasikSelatan", "kajang"],
+    },
+    position: { x: 10100, y: 7300 },
   },
   //yellow
   {
@@ -176,7 +232,7 @@ export const nodesData: Node[] = [
     type: "station",
     data: {
       label: "Bangsar",
-      lines: [{ color: "red", stationNumber: 11 }],
+      lines: [{ color: "red", stationNumber: 16 }],
       connectedStations: ["klSentral", "abdullahHukum"],
     },
     position: { x: 6000, y: 6700 },

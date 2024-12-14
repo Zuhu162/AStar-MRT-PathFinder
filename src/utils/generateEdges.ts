@@ -5,7 +5,7 @@ export const generateEdges = (nodes: NodeType[]): EdgeType[] => {
   const edgeSet = new Set<string>(); // To track unique edges
 
   nodes.forEach((node) => {
-    const { connectedStations } = node.data;
+    const { connectedStations, lines } = node.data;
 
     connectedStations.forEach((connectedStation) => {
       // Find the connected node
@@ -13,33 +13,37 @@ export const generateEdges = (nodes: NodeType[]): EdgeType[] => {
 
       if (!targetNode) return;
 
-      // Find all the line colors connecting the two nodes
-      const commonLines = node.data.lines.filter((line) =>
-        targetNode.data.lines.some(
-          (targetLine) => targetLine.color === line.color
-        )
-      );
+      // Explicitly match sequential station connections
+      lines.forEach((nodeLine) => {
+        const targetLines = targetNode.data.lines;
+        const matchingTargetLine = targetLines.find(
+          (targetLine) =>
+            targetLine.color === nodeLine.color &&
+            (targetLine.stationNumber === nodeLine.stationNumber + 1 ||
+              targetLine.stationNumber === nodeLine.stationNumber - 1)
+        );
 
-      // Create an edge for each common line
-      commonLines.forEach((line) => {
-        const edgeId = `${node.id}-${connectedStation}-${line.color}`;
-        const reverseEdgeId = `${connectedStation}-${node.id}-${line.color}`;
+        // Only create an edge if the connecting line is sequentially matched
+        if (matchingTargetLine) {
+          const edgeId = `${node.id}-${connectedStation}-${nodeLine.color}-${nodeLine.stationNumber}`;
+          const reverseEdgeId = `${connectedStation}-${node.id}-${nodeLine.color}-${nodeLine.stationNumber}`;
 
-        // Avoid adding duplicate edges (even in reverse direction)
-        if (!edgeSet.has(edgeId) && !edgeSet.has(reverseEdgeId)) {
-          edges.push({
-            id: edgeId,
-            source: node.id,
-            target: connectedStation,
-            type: "smoothstep",
-            sourceHandle: `${node.data.label}-${line.color}-source`,
-            targetHandle: `${targetNode.data.label}-${line.color}-target`,
-            style: {
-              stroke: line.color,
-              strokeWidth: 5,
-            },
-          });
-          edgeSet.add(edgeId); // Mark edge as added
+          // Avoid adding duplicate edges
+          if (!edgeSet.has(edgeId) && !edgeSet.has(reverseEdgeId)) {
+            edges.push({
+              id: edgeId,
+              source: node.id,
+              target: connectedStation,
+              type: "smoothstep",
+              sourceHandle: `${node.data.label}-${nodeLine.color}-source`,
+              targetHandle: `${targetNode.data.label}-${nodeLine.color}-target`,
+              style: {
+                stroke: nodeLine.color,
+                strokeWidth: 5,
+              },
+            });
+            edgeSet.add(edgeId);
+          }
         }
       });
     });
