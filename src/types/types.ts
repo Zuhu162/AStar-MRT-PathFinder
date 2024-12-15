@@ -3,6 +3,11 @@ export type Line = {
   stationNumber: number;
 };
 
+export type NextStation = {
+  id: string;
+  time: number;
+};
+
 //
 export type Node = {
   id: string;
@@ -13,7 +18,7 @@ export type Node = {
 export type NodeData = {
   label: string;
   lines: Line[];
-  connectedStations: string[];
+  connectedStations: NextStation[];
 };
 export type Position = {
   x: number;

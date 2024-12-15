@@ -9,7 +9,7 @@ export const generateEdges = (nodes: NodeType[]): EdgeType[] => {
 
     connectedStations.forEach((connectedStation) => {
       // Find the connected node
-      const targetNode = nodes.find((n) => n.id === connectedStation);
+      const targetNode = nodes.find((n) => n.id === connectedStation.id);
 
       if (!targetNode) return;
 
@@ -25,15 +25,15 @@ export const generateEdges = (nodes: NodeType[]): EdgeType[] => {
 
         // Only create an edge if the connecting line is sequentially matched
         if (matchingTargetLine) {
-          const edgeId = `${node.id}-${connectedStation}-${nodeLine.color}-${nodeLine.stationNumber}`;
-          const reverseEdgeId = `${connectedStation}-${node.id}-${nodeLine.color}-${nodeLine.stationNumber}`;
+          const edgeId = `${node.id}-${connectedStation.id}-${nodeLine.color}-${nodeLine.stationNumber}`;
+          const reverseEdgeId = `${connectedStation.id}-${node.id}-${nodeLine.color}-${nodeLine.stationNumber}`;
 
           // Avoid adding duplicate edges
           if (!edgeSet.has(edgeId) && !edgeSet.has(reverseEdgeId)) {
             edges.push({
               id: edgeId,
               source: node.id,
-              target: connectedStation,
+              target: connectedStation.id,
               type: "smoothstep",
               sourceHandle: `${node.data.label}-${nodeLine.color}-source`,
               targetHandle: `${targetNode.data.label}-${nodeLine.color}-target`,
