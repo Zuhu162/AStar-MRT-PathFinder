@@ -7,18 +7,12 @@ interface props {
 }
 
 const StationSelect = ({ inputLabel, onStationInput }: props) => {
-  const [selectedStation, setSelectedStation] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredStations = nodesData.filter((station) =>
     station.data.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
-  const handleStationInput = () => {
-    console.log(selectedStation);
-    onStationInput(selectedStation);
-  };
 
   return (
     <div className="relative w-64">
@@ -27,7 +21,7 @@ const StationSelect = ({ inputLabel, onStationInput }: props) => {
       </label>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex justify-between items-center border border-gray-300 rounded-md p-2 cursor-pointer">
+        className="flex justify-between items-center input input-bordered w-full rounded-md p-2 cursor-pointer">
         <input
           type="text"
           value={searchTerm}
@@ -47,10 +41,9 @@ const StationSelect = ({ inputLabel, onStationInput }: props) => {
             <li
               key={station.id}
               onClick={() => {
-                setSelectedStation(station.id);
                 setSearchTerm(station.data.label);
                 setIsOpen(false);
-                handleStationInput();
+                onStationInput(station.id);
               }}
               className="p-2 hover:bg-gray-100 cursor-pointer">
               {station.data.label}

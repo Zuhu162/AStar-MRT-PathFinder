@@ -1,6 +1,9 @@
 import { Node as NodeType, Edge as EdgeType } from "../types/types";
 
-export const generateEdges = (nodes: NodeType[]): EdgeType[] => {
+export const generateEdges = (
+  nodes: NodeType[],
+  selected?: string[]
+): EdgeType[] => {
   const edges: EdgeType[] = [];
   const edgeSet = new Set<string>(); // To track unique edges
 
@@ -30,19 +33,38 @@ export const generateEdges = (nodes: NodeType[]): EdgeType[] => {
 
           // Avoid adding duplicate edges
           if (!edgeSet.has(edgeId) && !edgeSet.has(reverseEdgeId)) {
-            edges.push({
-              id: edgeId,
-              source: node.id,
-              target: connectedStation.id,
-              type: "smoothstep",
-              sourceHandle: `${node.data.label}-${nodeLine.color}-source`,
-              targetHandle: `${targetNode.data.label}-${nodeLine.color}-target`,
-              style: {
-                stroke: nodeLine.color,
-                strokeWidth: 5,
-              },
-            });
-            edgeSet.add(edgeId);
+            if (
+              selected?.includes(node.id) &&
+              selected?.includes(connectedStation.id)
+            ) {
+              edges.push({
+                id: edgeId,
+                source: node.id,
+                target: connectedStation.id,
+                type: "smoothstep",
+                sourceHandle: `${node.data.label}-${nodeLine.color}-source`,
+                targetHandle: `${targetNode.data.label}-${nodeLine.color}-target`,
+                style: {
+                  stroke: nodeLine.color,
+                  strokeWidth: 20,
+                },
+              });
+              edgeSet.add(edgeId);
+            } else {
+              edges.push({
+                id: edgeId,
+                source: node.id,
+                target: connectedStation.id,
+                type: "smoothstep",
+                sourceHandle: `${node.data.label}-${nodeLine.color}-source`,
+                targetHandle: `${targetNode.data.label}-${nodeLine.color}-target`,
+                style: {
+                  stroke: nodeLine.color,
+                  strokeWidth: 5,
+                },
+              });
+              edgeSet.add(edgeId);
+            }
           }
         }
       });

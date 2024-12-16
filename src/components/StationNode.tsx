@@ -60,7 +60,7 @@ function CustomNode({ data }: Data) {
           const offset = index * 20;
 
           return (
-            <div>
+            <div key={index}>
               <div
                 className={`text-white w-12 h-12 flex justify-center items-center ${getStationColor(
                   line.color
