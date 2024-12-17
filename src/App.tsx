@@ -1,10 +1,10 @@
-import MRTMap from "./components/MRTMap";
+import MRTInterface from "./components/MRTInterface";
 
 function App() {
   return (
     <>
-      <div className="w-full h-screen flex items-center justify-center">
-        <MRTMap />
+      <div className="w-full flex items-center justify-center text-primary-content">
+        <MRTInterface />
       </div>
     </>
   );

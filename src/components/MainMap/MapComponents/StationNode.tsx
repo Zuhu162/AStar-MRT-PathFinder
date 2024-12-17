@@ -1,6 +1,6 @@
 import { memo } from "react";
 import { Handle, Position } from "@xyflow/react";
-import { NodeData } from "../types/types";
+import { NodeData } from "../../../types/types";
 
 interface Data {
   data: NodeData;

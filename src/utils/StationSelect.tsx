@@ -16,7 +16,7 @@ const StationSelect = ({ inputLabel, onStationInput }: props) => {
 
   return (
     <div className="relative w-64">
-      <label className="block text-gray-700 text-sm font-bold mb-2">
+      <label className="block text-primary text-sm font-bold mb-2">
         {inputLabel}
       </label>
       <div

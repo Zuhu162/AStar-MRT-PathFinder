@@ -35,7 +35,6 @@ export const nodesData: Node[] = [
         { color: "yellow", stationNumber: 13 },
       ],
       connectedStations: [
-        { id: "batuCaves", time: 8 },
         { id: "tamanWahyu", time: 3 },
         { id: "sriDelima", time: 4 },
         { id: "kentonmen", time: 4 },
