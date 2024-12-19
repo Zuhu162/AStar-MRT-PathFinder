@@ -17,11 +17,15 @@ function getStationColor(color: String) {
       break;
 
     case "red":
-      return "bg-red-400";
+      return "bg-red-600";
       break;
 
-    case "pink":
-      return "bg-pink-500";
+    case "magenta":
+      return "bg-pink-600";
+      break;
+
+    case "brown":
+      return "bg-red-900";
       break;
 
     case "purple":
@@ -57,7 +61,7 @@ function CustomNode({ data }: Data) {
       className={`p-3 rounded-md w-[150px] bg-white shadow-md border-gray-400`}>
       <div className="flex w-full h-full justify-center items-center">
         {data.lines.map((line, index) => {
-          const offset = index * 20;
+          const offset = index * 15;
 
           return (
             <div key={index}>
@@ -72,7 +76,7 @@ function CustomNode({ data }: Data) {
                   position={Position.Top}
                   style={{
                     ...DEFAULT_HANDLE_STYLE,
-                    left: `${0 + offset}%`,
+                    left: `${10 + offset}%`,
                     background: line.color,
                   }}
                 />
@@ -83,7 +87,7 @@ function CustomNode({ data }: Data) {
                   position={Position.Top}
                   style={{
                     ...DEFAULT_HANDLE_STYLE,
-                    left: `${0 + offset}%`,
+                    left: `${10 + offset}%`,
                     background: line.color,
                   }}
                 />

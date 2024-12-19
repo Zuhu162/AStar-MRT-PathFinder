@@ -126,7 +126,7 @@ export const nodesData: Node[] = [
       lines: [
         { color: "blue", stationNumber: 9 },
         { color: "red", stationNumber: 15 },
-        { color: "pink", stationNumber: 15 },
+        { color: "magenta", stationNumber: 15 },
         { color: "purple", stationNumber: 1 },
         { color: "aqua", stationNumber: 0 },
         { color: "gold", stationNumber: 3 },
@@ -134,8 +134,8 @@ export const nodesData: Node[] = [
       connectedStations: [
         { id: "kualaLumpur", time: 6 },
         { id: "midValley", time: 3 },
-        { id: "bangsar", time: 4 },
-        { id: "pasarSeni", time: 5 },
+        { id: "bangsar", time: 2 },
+        { id: "pasarSeni", time: 4 },
         { id: "abdullahHukum", time: 4 },
         { id: "bandarTasikSelatan", time: 7 },
         { id: "KLIA1", time: 30 },
@@ -190,12 +190,15 @@ export const nodesData: Node[] = [
       lines: [
         { color: "blue", stationNumber: 13 },
         { color: "aqua", stationNumber: 1 },
+        { color: "brown", stationNumber: 16 },
       ],
       connectedStations: [
         { id: "salakSelatan", time: 4 },
         { id: "serdang", time: 5 },
         { id: "putrajayaSentral", time: 12 },
         { id: "klSentral", time: 5 },
+        { id: "sungaiBesi", time: 3 },
+        { id: "bandarTunRazak", time: 1 },
       ],
     },
     position: { x: 9500, y: 6400 },
@@ -482,10 +485,15 @@ export const nodesData: Node[] = [
     type: "station",
     data: {
       label: "Ampang Park",
-      lines: [{ color: "yellow", stationNumber: 20 }],
+      lines: [
+        { color: "yellow", stationNumber: 20 },
+        { color: "magenta", stationNumber: 9 },
+      ],
       connectedStations: [
         { id: "rajaUda", time: 2 },
         { id: "persianKLCC", time: 2 },
+        { id: "KLCC", time: 2 },
+        { id: "damai", time: 3 },
       ],
     },
     position: { x: 8800, y: 3000 },
@@ -573,10 +581,15 @@ export const nodesData: Node[] = [
     type: "station",
     data: {
       label: "Sungai Besi",
-      lines: [{ color: "yellow", stationNumber: 27 }],
+      lines: [
+        { color: "yellow", stationNumber: 27 },
+        { color: "brown", stationNumber: 17 },
+      ],
       connectedStations: [
         { id: "tamanNagaEmas", time: 3 },
         { id: "serdangRayaUtara", time: 3 },
+        { id: "bukitJalil", time: 2 },
+        { id: "bandarTasikSelatan", time: 2 },
       ],
     },
     position: { x: 8900, y: 7900 },
@@ -894,10 +907,15 @@ export const nodesData: Node[] = [
     type: "station",
     data: {
       label: "Abdullah Hukum",
-      lines: [{ color: "red", stationNumber: 16 }],
+      lines: [
+        { color: "red", stationNumber: 16 },
+        { color: "magenta", stationNumber: 17 },
+      ],
       connectedStations: [
         { id: "klSentral", time: 6 },
         { id: "angkasapuri", time: 3 },
+        { id: "kerinchi", time: 2 },
+        { id: "bangsar", time: 3 },
       ],
     },
     position: { x: 5900, y: 7400 },
@@ -954,4 +972,812 @@ export const nodesData: Node[] = [
     },
     position: { x: 4400, y: 8200 },
   },
+  {
+    id: "kampungDatoHarun",
+    type: "station",
+    data: {
+      label: "Kampung Dato Harun",
+      lines: [{ color: "red", stationNumber: 21 }],
+      connectedStations: [
+        { id: "jalanTempler", time: 6 },
+        { id: "seriSetia", time: 2 },
+      ],
+    },
+    position: { x: 3900, y: 8200 },
+  },
+  {
+    id: "seriSetia",
+    type: "station",
+    data: {
+      label: "Seri Setia",
+      lines: [{ color: "red", stationNumber: 22 }],
+      connectedStations: [
+        { id: "kampungDatoHarun", time: 2 },
+        { id: "setiaJaya", time: 8 },
+      ],
+    },
+    position: { x: 3400, y: 8200 },
+  },
+  {
+    id: "setiaJaya",
+    type: "station",
+    data: {
+      label: "Setia Jaya",
+      lines: [{ color: "red", stationNumber: 23 }],
+      connectedStations: [
+        { id: "seriSetia", time: 8 },
+        { id: "subangJaya", time: 8 },
+      ],
+    },
+    position: { x: 3100, y: 8400 },
+  },
+  {
+    id: "subangJaya",
+    type: "station",
+    data: {
+      label: "Subang Jaya",
+      lines: [
+        { color: "red", stationNumber: 24 },
+        { color: "magenta", stationNumber: 28 },
+      ],
+      connectedStations: [
+        { id: "setiaJaya", time: 8 },
+        { id: "batuTiga", time: 8 },
+        { id: "glenmarie", time: 4 },
+        { id: "SS15", time: 3 },
+      ],
+    },
+    position: { x: 2300, y: 8400 },
+  },
+  {
+    id: "batuTiga",
+    type: "station",
+    data: {
+      label: "Batu Tiga",
+      lines: [{ color: "red", stationNumber: 25 }],
+      connectedStations: [
+        { id: "subangJaya", time: 8 },
+        { id: "shahAlam", time: 15 },
+      ],
+    },
+    position: { x: 1900, y: 8600 },
+  },
+  {
+    id: "shahAlam",
+    type: "station",
+    data: {
+      label: "Shah Alam",
+      lines: [{ color: "red", stationNumber: 26 }],
+      connectedStations: [
+        { id: "batuTiga", time: 15 },
+        { id: "padangJawa", time: 6 },
+      ],
+    },
+    position: { x: 1900, y: 8900 },
+  },
+  {
+    id: "padangJawa",
+    type: "station",
+    data: {
+      label: "Padang Jawa",
+      lines: [{ color: "red", stationNumber: 27 }],
+      connectedStations: [
+        { id: "shahAlam", time: 6 },
+        { id: "bukitBadak", time: 6 },
+      ],
+    },
+    position: { x: 1900, y: 9100 },
+  },
+  {
+    id: "bukitBadak",
+    type: "station",
+    data: {
+      label: "Bukit Badak",
+      lines: [{ color: "red", stationNumber: 28 }],
+      connectedStations: [
+        { id: "padangJawa", time: 6 },
+        { id: "klang", time: 4 },
+      ],
+    },
+    position: { x: 1700, y: 9400 },
+  },
+  {
+    id: "klang",
+    type: "station",
+    data: {
+      label: "Klang",
+      lines: [{ color: "red", stationNumber: 29 }],
+      connectedStations: [
+        { id: "bukitBadak", time: 4 },
+        { id: "telukPulai", time: 3 },
+      ],
+    },
+    position: { x: 1500, y: 9600 },
+  },
+  {
+    id: "telukPulai",
+    type: "station",
+    data: {
+      label: "Teluk Pulai",
+      lines: [{ color: "red", stationNumber: 30 }],
+      connectedStations: [
+        { id: "klang", time: 3 },
+        { id: "telukGadong", time: 3 },
+      ],
+    },
+    position: { x: 1300, y: 10000 },
+  },
+  {
+    id: "telukGadong",
+    type: "station",
+    data: {
+      label: "Teluk Gadong",
+      lines: [{ color: "red", stationNumber: 31 }],
+      connectedStations: [
+        { id: "telukPulai", time: 3 },
+        { id: "kampungRajaUda", time: 2 },
+      ],
+    },
+    position: { x: 1300, y: 10300 },
+  },
+  {
+    id: "kampungRajaUda",
+    type: "station",
+    data: {
+      label: "Kampung Raja Uda",
+      lines: [{ color: "red", stationNumber: 32 }],
+      connectedStations: [
+        { id: "telukGadong", time: 2 },
+        { id: "jalanKastam", time: 7 },
+      ],
+    },
+    position: { x: 1300, y: 10500 },
+  },
+  {
+    id: "jalanKastam",
+    type: "station",
+    data: {
+      label: "Jalan Kastam",
+      lines: [{ color: "red", stationNumber: 33 }],
+      connectedStations: [
+        { id: "kampungRajaUda", time: 7 },
+        { id: "pelabuhanKlang", time: 6 },
+      ],
+    },
+    position: { x: 1300, y: 10700 },
+  },
+  {
+    id: "pelabuhanKlang",
+    type: "station",
+    data: {
+      label: "Pelabuhan Klang",
+      lines: [{ color: "red", stationNumber: 34 }],
+      connectedStations: [{ id: "jalanKastam", time: 6 }],
+    },
+    position: { x: 1300, y: 10900 },
+  },
+  {
+    id: "glenmarie",
+    type: "station",
+    data: {
+      label: "Glenmarie",
+      lines: [{ color: "magenta", stationNumber: 27 }],
+      connectedStations: [
+        { id: "subangJaya", time: 4 },
+        { id: "araDamansara", time: 3 },
+      ],
+    },
+    position: { x: 2300, y: 7500 },
+  },
+  {
+    id: "araDamansara",
+    type: "station",
+    data: {
+      label: "Ara Damansara",
+      lines: [{ color: "magenta", stationNumber: 26 }],
+      connectedStations: [
+        { id: "glenmarie", time: 3 },
+        { id: "lembahSubang", time: 2 },
+      ],
+    },
+    position: { x: 2300, y: 7200 },
+  },
+  {
+    id: "lembahSubang",
+    type: "station",
+    data: {
+      label: "Lembah Subang",
+      lines: [{ color: "magenta", stationNumber: 25 }],
+      connectedStations: [
+        { id: "araDamansara", time: 2 },
+        { id: "kelanaJaya", time: 3 },
+      ],
+    },
+    position: { x: 2300, y: 6900 },
+  },
+  {
+    id: "kelanaJaya",
+    type: "station",
+    data: {
+      label: "Kelana Jaya",
+      lines: [{ color: "magenta", stationNumber: 24 }],
+      connectedStations: [
+        { id: "lembahSubang", time: 3 },
+        { id: "tamanBahagia", time: 2 },
+      ],
+    },
+    position: { x: 2800, y: 6700 },
+  },
+  {
+    id: "tamanBahagia",
+    type: "station",
+    data: {
+      label: "Taman Bahagia",
+      lines: [{ color: "magenta", stationNumber: 23 }],
+      connectedStations: [
+        { id: "kelanaJaya", time: 2 },
+        { id: "tamanParamount", time: 3 },
+      ],
+    },
+    position: { x: 3200, y: 6700 },
+  },
+  {
+    id: "tamanParamount",
+    type: "station",
+    data: {
+      label: "Taman Paramount",
+      lines: [{ color: "magenta", stationNumber: 22 }],
+      connectedStations: [
+        { id: "tamanBahagia", time: 3 },
+        { id: "asiaJaya", time: 3 },
+      ],
+    },
+    position: { x: 3500, y: 6700 },
+  },
+  {
+    id: "asiaJaya",
+    type: "station",
+    data: {
+      label: "Asia Jaya",
+      lines: [{ color: "magenta", stationNumber: 21 }],
+      connectedStations: [
+        { id: "tamanParamount", time: 3 },
+        { id: "tamanJaya", time: 2 },
+      ],
+    },
+    position: { x: 4000, y: 6700 },
+  },
+  {
+    id: "tamanJaya",
+    type: "station",
+    data: {
+      label: "Taman Jaya",
+      lines: [{ color: "magenta", stationNumber: 20 }],
+      connectedStations: [
+        { id: "asiaJaya", time: 2 },
+        { id: "unversiti", time: 3 },
+      ],
+    },
+    position: { x: 4300, y: 6700 },
+  },
+  {
+    id: "unversiti",
+    type: "station",
+    data: {
+      label: "Universiti",
+      lines: [{ color: "magenta", stationNumber: 19 }],
+      connectedStations: [
+        { id: "tamanJaya", time: 3 },
+        { id: "kerinchi", time: 3 },
+      ],
+    },
+    position: { x: 4600, y: 6700 },
+  },
+  {
+    id: "kerinchi",
+    type: "station",
+    data: {
+      label: "Kerinchi",
+      lines: [{ color: "magenta", stationNumber: 18 }],
+      connectedStations: [
+        { id: "unversiti", time: 3 },
+        { id: "abdullahHukum", time: 2 },
+      ],
+    },
+    position: { x: 4900, y: 7000 },
+  },
+  {
+    id: "bangsar",
+    type: "station",
+    data: {
+      label: "Bangsar",
+      lines: [{ color: "magenta", stationNumber: 16 }],
+      connectedStations: [
+        { id: "abdullahHukum", time: 3 },
+        { id: "klSentral", time: 2 },
+      ],
+    },
+    position: { x: 5900, y: 6600 },
+  },
+  {
+    id: "pasarSeni",
+    type: "station",
+    data: {
+      label: "Pasar Seni",
+      lines: [{ color: "magenta", stationNumber: 14 }],
+      connectedStations: [
+        { id: "klSentral", time: 4 },
+        { id: "masjidJamek", time: 2 },
+      ],
+    },
+    position: { x: 6900, y: 5400 },
+  },
+  {
+    id: "masjidJamek",
+    type: "station",
+    data: {
+      label: "Masjid Jamek",
+      lines: [{ color: "magenta", stationNumber: 13 }],
+      connectedStations: [
+        { id: "pasarSeni", time: 2 },
+        { id: "dangWangi", time: 3 },
+      ],
+    },
+    position: { x: 7200, y: 4700 },
+  },
+  {
+    id: "dangWangi",
+    type: "station",
+    data: {
+      label: "Dang Wangi",
+      lines: [{ color: "magenta", stationNumber: 12 }],
+      connectedStations: [
+        { id: "masjidJamek", time: 3 },
+        { id: "kampungBaru", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 3900 },
+  },
+  {
+    id: "kampungBaru",
+    type: "station",
+    data: {
+      label: "Kampung Baru",
+      lines: [{ color: "magenta", stationNumber: 11 }],
+      connectedStations: [
+        { id: "dangWangi", time: 2 },
+        { id: "KLCC", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 3500 },
+  },
+  {
+    id: "KLCC",
+    type: "station",
+    data: {
+      label: "KLCC",
+      lines: [{ color: "magenta", stationNumber: 10 }],
+      connectedStations: [
+        { id: "kampungBaru", time: 2 },
+        { id: "ampangPark", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 3200 },
+  },
+  {
+    id: "damai",
+    type: "station",
+    data: {
+      label: "Damai",
+      lines: [{ color: "magenta", stationNumber: 8 }],
+      connectedStations: [
+        { id: "ampangPark", time: 3 },
+        { id: "datoKeramat", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 2800 },
+  },
+  {
+    id: "datoKeramat",
+    type: "station",
+    data: {
+      label: "Dato' Keramat",
+      lines: [{ color: "magenta", stationNumber: 7 }],
+      connectedStations: [
+        { id: "damai", time: 2 },
+        { id: "jelatek", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 2500 },
+  },
+  {
+    id: "jelatek",
+    type: "station",
+    data: {
+      label: "Jelatek",
+      lines: [{ color: "magenta", stationNumber: 6 }],
+      connectedStations: [
+        { id: "datoKeramat", time: 2 },
+        { id: "setiawangsa", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 2300 },
+  },
+  {
+    id: "setiawangsa",
+    type: "station",
+    data: {
+      label: "Setiawangsa",
+      lines: [{ color: "magenta", stationNumber: 5 }],
+      connectedStations: [
+        { id: "jelatek", time: 2 },
+        { id: "sriRampai", time: 4 },
+      ],
+    },
+    position: { x: 8800, y: 2100 },
+  },
+  {
+    id: "sriRampai",
+    type: "station",
+    data: {
+      label: "Sri Rampai",
+      lines: [{ color: "magenta", stationNumber: 4 }],
+      connectedStations: [
+        { id: "setiawangsa", time: 4 },
+        { id: "wangsaMaju", time: 3 },
+      ],
+    },
+    position: { x: 8800, y: 1900 },
+  },
+  {
+    id: "wangsaMaju",
+    type: "station",
+    data: {
+      label: "Wangsa Maju",
+      lines: [{ color: "magenta", stationNumber: 3 }],
+      connectedStations: [
+        { id: "sriRampai", time: 3 },
+        { id: "tamanMelati", time: 3 },
+      ],
+    },
+    position: { x: 8800, y: 1700 },
+  },
+  {
+    id: "tamanMelati",
+    type: "station",
+    data: {
+      label: "Taman Melati",
+      lines: [{ color: "magenta", stationNumber: 2 }],
+      connectedStations: [
+        { id: "wangsaMaju", time: 3 },
+        { id: "gombak", time: 2 },
+      ],
+    },
+    position: { x: 8800, y: 1500 },
+  },
+  {
+    id: "gombak",
+    type: "station",
+    data: {
+      label: "Gombak",
+      lines: [{ color: "magenta", stationNumber: 1 }],
+      connectedStations: [{ id: "tamanMelati", time: 2 }],
+    },
+    position: { x: 8800, y: 1200 },
+  },
+  {
+    id: "SS15",
+    type: "station",
+    data: {
+      label: "SS15",
+      lines: [{ color: "magenta", stationNumber: 29 }],
+      connectedStations: [
+        { id: "subangJaya", time: 3 },
+        { id: "SS18", time: 2 },
+      ],
+    },
+    position: { x: 2300, y: 8800 },
+  },
+  {
+    id: "SS18",
+    type: "station",
+    data: {
+      label: "SS18",
+      lines: [{ color: "magenta", stationNumber: 30 }],
+      connectedStations: [
+        { id: "SS15", time: 2 },
+        { id: "USJ7", time: 5 },
+      ],
+    },
+    position: { x: 2300, y: 9000 },
+  },
+  {
+    id: "USJ7",
+    type: "station",
+    data: {
+      label: "USJ7",
+      lines: [{ color: "magenta", stationNumber: 31 }],
+      connectedStations: [
+        { id: "SS18", time: 5 },
+        { id: "taipan", time: 2 },
+      ],
+    },
+    position: { x: 2600, y: 9400 },
+  },
+  {
+    id: "taipan",
+    type: "station",
+    data: {
+      label: "Taipan",
+      lines: [{ color: "magenta", stationNumber: 32 }],
+      connectedStations: [
+        { id: "USJ7", time: 2 },
+        { id: "wawasan", time: 3 },
+      ],
+    },
+    position: { x: 2600, y: 10100 },
+  },
+  {
+    id: "wawasan",
+    type: "station",
+    data: {
+      label: "Wawasan",
+      lines: [{ color: "magenta", stationNumber: 33 }],
+      connectedStations: [
+        { id: "taipan", time: 3 },
+        { id: "USJ21", time: 3 },
+      ],
+    },
+    position: { x: 2600, y: 10400 },
+  },
+  {
+    id: "USJ21",
+    type: "station",
+    data: {
+      label: "USJ21",
+      lines: [{ color: "magenta", stationNumber: 34 }],
+      connectedStations: [
+        { id: "wawasan", time: 3 },
+        { id: "alamMegah", time: 4 },
+      ],
+    },
+    position: { x: 2600, y: 10700 },
+  },
+  {
+    id: "alamMegah",
+    type: "station",
+    data: {
+      label: "Alam Megah",
+      lines: [{ color: "magenta", stationNumber: 35 }],
+      connectedStations: [
+        { id: "USJ21", time: 4 },
+        { id: "subangAlam", time: 2 },
+      ],
+    },
+    position: { x: 3000, y: 11000 },
+  },
+  {
+    id: "subangAlam",
+    type: "station",
+    data: {
+      label: "Subang Alam",
+      lines: [{ color: "magenta", stationNumber: 36 }],
+      connectedStations: [
+        { id: "alamMegah", time: 2 },
+        { id: "putraHeights", time: 3 },
+      ],
+    },
+    position: { x: 3400, y: 11000 },
+  },
+  {
+    id: "putraHeights",
+    type: "station",
+    data: {
+      label: "Putra Heights",
+      lines: [
+        { color: "magenta", stationNumber: 37 },
+        { color: "brown", stationNumber: 30 },
+      ],
+      connectedStations: [
+        { id: "subangAlam", time: 3 },
+        { id: "puchongPrima", time: 3 },
+      ],
+    },
+    position: { x: 3900, y: 11000 },
+  },
+  {
+    id: "puchongPrima",
+    type: "station",
+    data: {
+      label: "Puchong Prima",
+      lines: [{ color: "brown", stationNumber: 29 }],
+      connectedStations: [
+        { id: "putraHeights", time: 3 },
+        { id: "puchongPerdana", time: 3 },
+      ],
+    },
+    position: { x: 4300, y: 11000 },
+  },
+  {
+    id: "puchongPerdana",
+    type: "station",
+    data: {
+      label: "Puchong Perdana",
+      lines: [{ color: "brown", stationNumber: 28 }],
+      connectedStations: [
+        { id: "puchongPrima", time: 3 },
+        { id: "bandarPuteri", time: 2 },
+      ],
+    },
+    position: { x: 4800, y: 11000 },
+  },
+  {
+    id: "bandarPuteri",
+    type: "station",
+    data: {
+      label: "Bandar Puteri",
+      lines: [{ color: "brown", stationNumber: 27 }],
+      connectedStations: [
+        { id: "puchongPerdana", time: 2 },
+        { id: "tamanPerindustrianPuchong", time: 2 },
+      ],
+    },
+    position: { x: 5400, y: 10600 },
+  },
+  {
+    id: "tamanPerindustrianPuchong",
+    type: "station",
+    data: {
+      label: "Taman Perindustrian Puchong",
+      lines: [{ color: "brown", stationNumber: 26 }],
+      connectedStations: [
+        { id: "bandarPuteri", time: 2 },
+        { id: "pusatBandarPuchong", time: 2 },
+      ],
+    },
+    position: { x: 5400, y: 10300 },
+  },
+  {
+    id: "pusatBandarPuchong",
+    type: "station",
+    data: {
+      label: "Pusat Bandar Puchong",
+      lines: [{ color: "brown", stationNumber: 25 }],
+      connectedStations: [
+        { id: "tamanPerindustrianPuchong", time: 2 },
+        { id: "ioiPuchongJaya", time: 1 },
+      ],
+    },
+    position: { x: 5400, y: 9900 },
+  },
+  {
+    id: "ioiPuchongJaya",
+    type: "station",
+    data: {
+      label: "IOI Puchong Jaya",
+      lines: [{ color: "brown", stationNumber: 24 }],
+      connectedStations: [
+        { id: "pusatBandarPuchong", time: 1 },
+        { id: "kinraraBK5", time: 4 },
+      ],
+    },
+    position: { x: 5400, y: 9600 },
+  },
+  {
+    id: "kinraraBK5",
+    type: "station",
+    data: {
+      label: "Kinrara BK 5",
+      lines: [{ color: "brown", stationNumber: 23 }],
+      connectedStations: [
+        { id: "ioiPuchongJaya", time: 4 },
+        { id: "alamSutera", time: 4 },
+      ],
+    },
+    position: { x: 5400, y: 9300 },
+  },
+  {
+    id: "alamSutera",
+    type: "station",
+    data: {
+      label: "Alam Sutera",
+      lines: [{ color: "brown", stationNumber: 22 }],
+      connectedStations: [
+        { id: "kinraraBK5", time: 4 },
+        { id: "muhibbah", time: 2 },
+      ],
+    },
+    position: { x: 5400, y: 9000 },
+  },
+  {
+    id: "muhibbah",
+    type: "station",
+    data: {
+      label: "Muhibbah",
+      lines: [{ color: "brown", stationNumber: 21 }],
+      connectedStations: [
+        { id: "alamSutera", time: 2 },
+        { id: "awanBesar", time: 2 },
+      ],
+    },
+    position: { x: 5400, y: 8800 },
+  },
+  {
+    id: "awanBesar",
+    type: "station",
+    data: {
+      label: "Awan Besar",
+      lines: [{ color: "brown", stationNumber: 20 }],
+      connectedStations: [
+        { id: "muhibbah", time: 3 },
+        { id: "sriPetaling", time: 2 },
+      ],
+    },
+    position: { x: 6000, y: 8200 },
+  },
+  {
+    id: "sriPetaling",
+    type: "station",
+    data: {
+      label: "Sri Petaling",
+      lines: [{ color: "brown", stationNumber: 19 }],
+      connectedStations: [
+        { id: "awanBesar", time: 2 },
+        { id: "bukitJalil", time: 2 },
+      ],
+    },
+    position: { x: 6500, y: 8200 },
+  },
+  {
+    id: "bukitJalil",
+    type: "station",
+    data: {
+      label: "Bukit Jalil",
+      lines: [{ color: "brown", stationNumber: 18 }],
+      connectedStations: [
+        { id: "sriPetaling", time: 2 },
+        { id: "sungaiBesi", time: 2 },
+      ],
+    },
+    position: { x: 6900, y: 8200 },
+  },
+
+  {
+    id: "bandarTunRazak",
+    type: "station",
+    data: {
+      label: "Bandar Tun Razak",
+      lines: [{ color: "brown", stationNumber: 15 }],
+      connectedStations: [
+        { id: "bandarTasikSelatan", time: 3 },
+        { id: "salakSelatan2", time: 3 },
+      ],
+    },
+    position: { x: 9500, y: 6000 },
+  },
+  {
+    id: "salakSelatan2",
+    type: "station",
+    data: {
+      label: "Salak Selatan (Sri Petaling Line)",
+      lines: [{ color: "brown", stationNumber: 14 }],
+      connectedStations: [
+        { id: "bandarTunRazak", time: 3 },
+        { id: "cheras", time: 3 },
+      ],
+    },
+    position: { x: 9500, y: 5800 },
+  },
+  {
+    id: "cheras",
+    type: "station",
+    data: {
+      label: "Cheras",
+      lines: [{ color: "brown", stationNumber: 13 }],
+      connectedStations: [{ id: "salakSelatan2", time: 3 }],
+    },
+    position: { x: 9900, y: 5200 },
+  },
 ];
+
+//
