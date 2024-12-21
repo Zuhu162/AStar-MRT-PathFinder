@@ -1,18 +1,24 @@
-import { useState } from "react";
-import { nodesData } from "../nodes/nodeData";
+import { useEffect, useState } from "react";
+import { nodesData } from "../../nodes/nodeData";
 
 interface props {
   inputLabel: string;
   onStationInput: Function;
+  value: string;
 }
 
-const StationSelect = ({ inputLabel, onStationInput }: props) => {
+const StationSelect = ({ inputLabel, onStationInput, value }: props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
   const filteredStations = nodesData.filter((station) =>
     station.data.label.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  useEffect(() => {
+    const station = nodesData.find((station) => station.id === value);
+    setSearchTerm(station?.data.label || "");
+  }, [value]);
 
   return (
     <div className="relative w-64">

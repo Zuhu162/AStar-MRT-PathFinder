@@ -23,7 +23,7 @@ export const pathFinder = (nodeList: Node[], start: string, target: string) => {
     const dx = currentNode.position.x - targetNode.position.x;
     const dy = currentNode.position.y - targetNode.position.y;
 
-    return Math.sqrt(dx * dx + dy * dy);
+    return 0.1 * Math.sqrt(dx * dx + dy * dy); // Scale the heuristic
   };
 
   // Initialize open and closed sets
@@ -93,6 +93,7 @@ export const pathFinder = (nodeList: Node[], start: string, target: string) => {
           id: neighborId,
           cost: tentativeCost,
           estimatedTotalCost: tentativeCost + heuristic(neighborId, target),
+          // estimatedTotalCost: tentativeCost,
           path: [...currentNode.path, neighborId],
           visited: false,
         });

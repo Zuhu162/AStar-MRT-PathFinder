@@ -12,6 +12,13 @@ function getStationColor(color: String) {
       return "bg-blue-600";
       break;
 
+    case "chartreuse":
+      return "bg-green-400";
+      break;
+
+    case "orange":
+      return "bg-orange-400";
+      break;
     case "yellow":
       return "bg-yellow-400";
       break;
@@ -32,8 +39,12 @@ function getStationColor(color: String) {
       return "bg-purple-800";
       break;
 
-    case "aqua":
+    case "cyan": {
       return "bg-cyan-400";
+    }
+
+    case "aqua":
+      return "bg-cyan-600";
       break;
 
     case "gold":

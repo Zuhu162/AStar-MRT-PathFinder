@@ -16,7 +16,6 @@ const StationFlow = ({ path }: Props) => {
       nodesData.find((node) => node.id === nodeId)
     );
     setSelectedStations(matchedNodes);
-    console.log(typeof matchedNodes[0]);
   };
 
   // Function to get color between stations
