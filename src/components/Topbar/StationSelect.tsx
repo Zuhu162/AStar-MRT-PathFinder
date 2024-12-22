@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { nodesData } from "../../nodes/nodeData";
-import ChevronDown from "../../assets/svgs/chevronDown";
+import ChevronDown from "../../assets/svgs/ChevronDown";
 import ChevronUp from "../../assets/svgs/ChevronUp";
 
 interface props {
