@@ -526,7 +526,7 @@ export const nodesData: Node[] = [
       lines: [{ color: "green", stationNumber: 21 }],
       connectedStations: [
         { id: "tamanMidah", time: 3 },
-        { id: "miharja", time: 1 },
+        { id: "maluri", time: 1 },
       ],
     },
     position: { x: 10900, y: 4000 },
