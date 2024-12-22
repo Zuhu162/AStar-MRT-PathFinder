@@ -35,7 +35,7 @@ const MRTInterface = () => {
         </div>
 
         {/* Sidebar Section */}
-        <div className="w-[25%] bg-base-200 overflow-y-auto">
+        <div className="w-[25%] bg-base-200 pb-20 overflow-y-auto mb-5">
           <StationFlow path={generatedPath} />
         </div>
       </div>

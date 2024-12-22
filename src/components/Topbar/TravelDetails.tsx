@@ -11,7 +11,7 @@ interface props {
 const TravelDetails = ({ onGeneratePath }: props) => {
   const [start, setStart] = useState("");
   const [end, setEnd] = useState("");
-  const [path, setPath] = useState<string[] | null>(null);
+  const [_path, setPath] = useState<string[] | null>(null);
 
   useEffect(() => {
     if (start && end) {

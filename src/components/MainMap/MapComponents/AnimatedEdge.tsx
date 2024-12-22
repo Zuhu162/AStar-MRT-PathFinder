@@ -37,7 +37,7 @@ export function AnimatedSVGEdge({
         }}
       />
       <circle
-        r="50"
+        r="60"
         fill={strokeColor}
         style={{ filter: `drop-shadow(3px 3px 5px ${strokeColor})` }}>
         <animateMotion
