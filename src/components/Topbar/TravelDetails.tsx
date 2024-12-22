@@ -47,11 +47,13 @@ const TravelDetails = ({ onGeneratePath }: props) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-around items-center p-3 bg-accent-content">
+    <div className="w-full h-full flex flex-col justify-center items-center p-3 bg-accent-content">
       <div className="w-full flex flex-col md:flex-row items-center justify-center md:space-x-5">
         <div className="mt-4 w-1/4">
-          <a href="https://github.com/Zuhu162">
-            <GithubIcon />
+          <a href="https://github.com/Zuhu162" target="_blank">
+            <button className="btn btn-circle btn-neutral">
+              <GithubIcon />
+            </button>
           </a>
         </div>
         <div className="w-3/4 flex space-x-5">
@@ -62,7 +64,8 @@ const TravelDetails = ({ onGeneratePath }: props) => {
           />
           <button
             onClick={switchStartEnd}
-            className="btn rounded-full btn-accent mt-7">
+            className="btn rounded-full btn-accent mt-7"
+            disabled={!start || !end || start === end}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -82,12 +85,12 @@ const TravelDetails = ({ onGeneratePath }: props) => {
             onStationInput={handleEndInput}
             value={end}
           />
-          <button
+          {/* <button
             className="btn rounded-full btn-primary mt-7"
             disabled={!start || !end || start === end}
             onClick={() => generatePath()}>
             Get Route
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

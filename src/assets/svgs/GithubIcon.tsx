@@ -2,12 +2,7 @@ const GithubIcon = () => {
   return (
     <div>
       <svg className="w-6 h-6" viewBox="0 0 20 20" version="1.1">
-        <g
-          id="Page-1"
-          stroke="white"
-          stroke-width="1"
-          fill="#white"
-          fill-rule="evenodd">
+        <g id="Page-1" fill-rule="evenodd">
           <g
             id="Dribbble-Light-Preview"
             transform="translate(-140.000000, -7559.000000)"
