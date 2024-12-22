@@ -49,14 +49,14 @@ const TravelDetails = ({ onGeneratePath }: props) => {
   return (
     <div className="w-full h-full flex flex-col justify-center items-center p-3 bg-accent-content">
       <div className="w-full flex flex-col md:flex-row items-center justify-center md:space-x-5">
-        <div className="mt-4 w-1/4">
+        <div className="mt-4 w-full md:w-1/4 flex justify-center">
           <a href="https://github.com/Zuhu162" target="_blank">
             <button className="btn btn-circle btn-neutral">
               <GithubIcon />
             </button>
           </a>
         </div>
-        <div className="w-3/4 flex space-x-5">
+        <div className="w-full md:w-3/4 flex space-x-5">
           <StationSelect
             inputLabel="Boarding at"
             onStationInput={handleStartInput}

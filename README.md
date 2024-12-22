@@ -29,6 +29,8 @@ References - </br>
 https://www.youtube.com/watch?v=aKYlikFAV4k&t=789s </br>
 https://www.youtube.com/watch?v=i0x5fj4PqP4
 
+![MRT Map](assets/images/mrt_map.png)
+
 ---
 
 ## Features
