@@ -23,9 +23,12 @@ This project is a pathfinding visualization tool for MRT systems, inspired by he
 
 ## Introduction
 
-This project visualizes the MRT stations of MyRapid KL, demonstrating pathfinding algorithms with accurate representations of station interconnections. The idea was inspired by a similar project utilizing MRT stations in Singapore and focuses on manually constructing nodes and edges to replicate the MyRapid KL system.
+This project visualizes the MRT stations of MyRapid KL, demonstrating pathfinding algorithms with accurate representations of station interconnections. The idea was inspired by a similar project utilizing MRT stations in Singapore and focuses on manually constructing nodes and edges to replicate the MyRapid KL system. </br>
+
+Link to Project - https://zuhu162.github.io/AStar-MRT-PathFinder/
 
 References - </br>
+https://www.youtube.com/watch?v=QXQ4iD4UXOE&t=1s
 https://www.youtube.com/watch?v=aKYlikFAV4k&t=789s </br>
 https://www.youtube.com/watch?v=i0x5fj4PqP4
 
@@ -183,4 +186,4 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ---
 
-Feel free to contribute or raise issues in the [Issues](https://github.com/zuhu162/smartMRT/issues) section!
+Feel free to contribute or raise issues in the [Issues](https://github.com/zuhu162/AStar-MRT-PathFinder/issues) section!
