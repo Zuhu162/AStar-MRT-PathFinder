@@ -30,7 +30,7 @@ const MRTInterface = () => {
       {/* Main Content */}
       <div className="w-full h-full flex">
         {/* Map Section */}
-        <div className="w-[75%] h-full">
+        <div className="w-[75%] h-[85%]">
           <MRTFlowMap edges={edges} nodes={nodesData} />
         </div>
 
