@@ -3,14 +3,14 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Zuhu162.github.io/AStar-MRT-PathFinder",
+  "homepage": "https://zuhu162.github.io/AStar-MRT-PathFinder",
   "predeploy": "npm run build",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@xyflow/react": "^12.3.6",
