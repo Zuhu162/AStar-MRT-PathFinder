@@ -3,7 +3,7 @@ import MRTInterface from "./components/MRTInterface";
 function App() {
   return (
     <>
-      <div className="w-full flex items-center justify-center text-primary-content">
+      <div className="w-full max-h-screen flex items-center justify-center text-primary-content">
         <MRTInterface />
       </div>
     </>

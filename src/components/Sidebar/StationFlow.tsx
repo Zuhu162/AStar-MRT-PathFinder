@@ -9,6 +9,7 @@ interface Props {
 const StationFlow = ({ path }: Props) => {
   // State to store the matched nodes data
   const [selectedStations, setSelectedStations] = useState<any[]>([]);
+  const [totalTime, setTotalTime] = useState<number>(0);
 
   // Function to fetch nodes data based on path
   const fetchNodesData = (path: string[]) => {
@@ -47,7 +48,7 @@ const StationFlow = ({ path }: Props) => {
   }, [path]);
 
   return (
-    <div className="h-full w-full">
+    <div className="w-full">
       <ul className="timeline timeline-snap-icon timeline-vertical">
         {selectedStations.map((station, index) => {
           const nextStation = selectedStations[index + 1];

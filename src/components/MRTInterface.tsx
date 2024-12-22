@@ -19,7 +19,7 @@ const MRTInterface = () => {
   return (
     <div className="w-full h-screen flex flex-col">
       {/* Top Section */}
-      <div className="w-full h-[15%]">
+      <div className="w-full">
         <TravelDetails
           onGeneratePath={(routePath: string[]) => {
             loadEdges(routePath);
@@ -28,7 +28,7 @@ const MRTInterface = () => {
       </div>
 
       {/* Main Content */}
-      <div className="w-full h-[85%] flex">
+      <div className="w-full h-full flex">
         {/* Map Section */}
         <div className="w-[75%] h-full">
           <MRTFlowMap edges={edges} nodes={nodesData} />

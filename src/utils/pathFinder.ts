@@ -92,8 +92,8 @@ export const pathFinder = (nodeList: Node[], start: string, target: string) => {
         openSet.set(neighborId, {
           id: neighborId,
           cost: tentativeCost,
-          estimatedTotalCost: tentativeCost + heuristic(neighborId, target),
-          // estimatedTotalCost: tentativeCost,
+          // estimatedTotalCost: tentativeCost + heuristic(neighborId, target), //A*
+          estimatedTotalCost: tentativeCost, //No heuristic for Dijkstra
           path: [...currentNode.path, neighborId],
           visited: false,
         });

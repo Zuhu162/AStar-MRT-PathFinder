@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { nodesData } from "../../nodes/nodeData";
+import ChevronDown from "../../assets/svgs/chevronDown";
+import ChevronUp from "../../assets/svgs/ChevronUp";
 
 interface props {
   inputLabel: string;
@@ -38,7 +40,7 @@ const StationSelect = ({ inputLabel, onStationInput, value }: props) => {
           placeholder="Select or search station"
           className="w-full outline-none"
         />
-        {/* <ChevronDown className="ml-2 text-gray-500" size={20} /> */}
+        <label>{isOpen ? <ChevronUp /> : <ChevronDown />}</label>
       </div>
 
       {isOpen && (

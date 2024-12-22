@@ -46,7 +46,7 @@ const TravelDetails = ({ onGeneratePath }: props) => {
   };
 
   return (
-    <div className="w-full h-full flex flex-col justify-around items-center py-1 bg-accent-content">
+    <div className="w-full h-full flex flex-col justify-around items-center p-3 bg-accent-content">
       <div className="w-full flex flex-col md:flex-row items-center justify-center md:space-x-5">
         <StationSelect
           inputLabel="Boarding at"
