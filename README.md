@@ -58,8 +58,8 @@ https://www.youtube.com/watch?v=i0x5fj4PqP4
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/mrt-pathfinding.git
-   cd mrt-pathfinding
+   git clone https://github.com/Zuhu162/AStar-MRT-PathFinder.git
+   cd AStar-MRT-PathFinder
    ```
 2. Install dependencies:
    ```bash
@@ -67,7 +67,7 @@ https://www.youtube.com/watch?v=i0x5fj4PqP4
    ```
 3. Start the development server:
    ```bash
-   npm start
+   npm run dev
    ```
 4. Open the application in your browser at `http://localhost:5173`.
 
